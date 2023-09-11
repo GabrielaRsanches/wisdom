@@ -1,16 +1,13 @@
 
-import { RandomUUIDOptions } from "crypto";
+import { randomUUID } from "crypto";
 import { Answer } from "../answer/Answer";
 import { Subject } from "../enum";
 import { Student } from "../student/Student";
 import { Teacher } from "../teacher/Teacher";
 
-export interface QuestionId {
-  id: RandomUUIDOptions
-}
 export class Question {
   constructor(
-    private readonly questionId: QuestionId,
+    private readonly questionId: string,
     private  subject: Subject[],
     private  title: string,
     private  description: string,
@@ -20,6 +17,7 @@ export class Question {
     private readonly answeredBy?: Teacher
 
   ){
+  this.questionId = randomUUID()
    this.createdAt = new Date()
   }
 
@@ -32,10 +30,10 @@ export class Question {
     this.title = newTitle
     this.description = newDescription
   }
-  async answerQuestion(answer: Answer, questionId: QuestionId, description: string){
+  async answerQuestion(answer: Answer, questionId: string, description: string){
     return answer.createAnswer(questionId, description)
   }
-  async deleteQuestion(questionId: QuestionId){
+  async deleteQuestion(questionId: string){
 
   }
 }
