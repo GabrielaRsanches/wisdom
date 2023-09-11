@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build:web": "nx run web:build",
-    "build:api": "nx run api:build",
+    "build:api": "nx run api:build"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +23,7 @@
     "@nestjs/core": "^10.0.2",
     "@nestjs/platform-express": "^10.0.2",
     "axios": "^1.0.0",
+    "class-validator": "^0.14.0",
     "front-matter": "^4.0.2",
     "marked": "^5.0.2",
     "marked-gfm-heading-id": "^3.0.4",
