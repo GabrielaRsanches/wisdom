@@ -1,13 +1,22 @@
 import { RandomUUIDOptions } from "crypto";
-import { Question } from "../question/Question";
+import { Question, QuestionId } from "../question/Question";
 
-interface StudentId {
+export interface AnswerId {
   id: RandomUUIDOptions
 }
 export class Answer {
   constructor(
-    private readonly studentId: StudentId,
+    private readonly studentId: AnswerId,
     private text: string,
-    private readonly answeringTo: Question
+    private answeringTo: QuestionId
   ){}
+
+  async createAnswer(questionId: QuestionId, text: string){
+    this.answeringTo = questionId
+    this.text = text
+  }
+  async editAnswer( newText: string){
+    this.text = newText
+  }
+  async deleteAnswer(answerId: AnswerId){}
 }

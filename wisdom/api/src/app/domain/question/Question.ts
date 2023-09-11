@@ -5,21 +5,37 @@ import { Subject } from "../enum";
 import { Student } from "../student/Student";
 import { Teacher } from "../teacher/Teacher";
 
-interface QuestionId {
+export interface QuestionId {
   id: RandomUUIDOptions
 }
 export class Question {
   constructor(
     private readonly questionId: QuestionId,
-    private readonly subject: Subject[],
-    private readonly title: string,
-    private readonly description: string,
-    private readonly madeBy: Student,
+    private  subject: Subject[],
+    private  title: string,
+    private  description: string,
+    private  madeBy: Student,
     private readonly createdAt: Date,
-    private readonly answers: Answer[],
+    private  answers: Answer[],
     private readonly answeredBy?: Teacher
 
   ){
    this.createdAt = new Date()
+  }
+
+  async createQuestion(title: string, description: string, madeBy: Student){
+    this.title = title
+    this.description = description,
+    this.madeBy = madeBy
+  }
+  async editQuestion(newTitle: string, newDescription: string){
+    this.title = newTitle
+    this.description = newDescription
+  }
+  async answerQuestion(answer: Answer, questionId: QuestionId, description: string){
+    return answer.createAnswer(questionId, description)
+  }
+  async deleteQuestion(questionId: QuestionId){
+
   }
 }
