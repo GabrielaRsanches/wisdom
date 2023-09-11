@@ -1,16 +1,25 @@
-import { RandomUUIDOptions } from "crypto";
+import { randomUUID } from "crypto";
 import { Question } from "../question/Question";
 import { Grade } from "../enum";
 
-interface StudentId {
-  id: RandomUUIDOptions
-}
+
 export class Student {
   constructor(
-    private readonly studentId: StudentId,
+    private readonly studentId: string,
     private userName: string,
     private password: string,
-    private readonly createdQuestions: Question[],
-    private grade: Grade
-  ){}
+    private grade: Grade,
+    private readonly createdQuestions?: Question[]
+  ){
+    this.studentId =  randomUUID()
+  }
+
+  async createStudent(userName: string, password: string, grade: Grade){}
+  async changePassword(newPassword: string){
+    this.password = newPassword
+  }
+  async changeUserName(userName: string){
+    this.userName = userName
+  }
+  async deletedAccount(){}
 }

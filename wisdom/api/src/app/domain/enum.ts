@@ -7,7 +7,7 @@ export enum Subject {
   Chemistry = 'Chemistry'
 }
 
-export enum TeachingAreas {
+export enum TeachingArea {
   ExactSciences = 'ExactSciences',
   HumanSciences = 'HumanSciences',
   Portuguese = 'Portuguese',

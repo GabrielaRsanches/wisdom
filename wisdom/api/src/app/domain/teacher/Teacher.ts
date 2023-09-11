@@ -1,21 +1,35 @@
-import { RandomUUIDOptions } from "crypto";
+import { randomUUID } from "crypto";
 import { Question } from "../question/Question";
-import { TeachingAreas } from "../enum";
+import { TeachingArea } from "../enum";
 import { Email } from "../email.interface";
 
-interface TeacherId {
-  id: RandomUUIDOptions
-}
 export class Teacher {
 
   constructor(
-    private readonly teacherId: TeacherId,
+    private readonly teacherId: string,
     private name: string,
     private email: Email,
-    private password: string, 
-    private readonly credentials: Credential[],
-    private teachingArea: TeachingAreas,
+    private password: string,
+    private credentials: Credential[],
+    private teachingArea: TeachingArea,
     private score: number,
-    private answeredQuestions: Question[]
-  ){}
+    private answeredQuestions?: Question[]
+  ){
+    this.score = 0
+    this.teacherId = randomUUID()
+  }
+
+
+  async createTeacher(name: string, email: string, password: string, credentials: Credential[], TeachingArea: TeachingArea[]){
+  }
+  async editCredentials(credentials: Credential[]){
+    this.credentials = credentials
+  }
+  async changePassword(newPassword: string){
+    this.password = newPassword
+  }
+  async updateEmail(email: Email){
+    this.email = email
+  }
+  async deletedAccount(){}
 }
