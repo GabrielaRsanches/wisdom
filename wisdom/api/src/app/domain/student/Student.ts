@@ -15,4 +15,11 @@ export class Student {
   }
 
   async createStudent(userName: string, password: string, grade: Grade){}
+  async changePassword(newPassword: string){
+    this.password = newPassword
+  }
+  async changeUserName(userName: string){
+    this.userName = userName
+  }
+  async deletedAccount(){}
 }
