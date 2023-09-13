@@ -18,7 +18,7 @@ import { Component } from '@angular/core';
 
 
   <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="./assets/css/fontawesome.css">
+  <link rel="stylesheet" href="./assets/index.js">
   <link rel="stylesheet" href="./assets/css/templatemo-scholar.css">
   <link rel="stylesheet" href="./assets/css/owl.css">
   <link rel="stylesheet" href="./assets/css/animate.css">
@@ -48,7 +48,7 @@ https://templatemo.com/tm-586-scholar
                   <!-- ***** Serach Start ***** -->
                   <div class="search-input">
                     <form id="search" action="#">
-                      <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                      <input type="text" placeholder="Pesquisa" id='searchText' name="searchKeyword" onkeypress="handle" />
                       <i class="fa fa-search"></i>
                     </form>
                   </div>
@@ -56,7 +56,7 @@ https://templatemo.com/tm-586-scholar
                   <!-- ***** Menu Start ***** -->
                   <ul class="nav">
                     <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                    <li class="scroll-to-section"><a href="#services">Services</a></li>
+                    <li class="scroll-to-section"><a href="#services">Professores</a></li>
                     <li class="scroll-to-section"><a href="#courses">Courses</a></li>
                     <li class="scroll-to-section"><a href="#team">Team</a></li>
                     <li class="scroll-to-section"><a href="#events">Events</a></li>
@@ -605,70 +605,13 @@ https://templatemo.com/tm-586-scholar
   </div>
 </div>
 
-<div class="contact-us section" id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6  align-self-center">
-        <div class="section-heading">
-          <h6>Contact Us</h6>
-          <h2>Feel free to contact us anytime</h2>
-          <p>Thank you for choosing our templates. We provide you best CSS templates at absolutely 100% free of charge. You may support us by sharing our website to your friends.</p>
-          <div class="special-offer">
-            <span class="offer">off<br><em>50%</em></span>
-            <h6>Valide: <em>24 April 2036</em></h6>
-            <h4>Special Offer <em>50%</em> OFF!</h4>
-            <a href="#"><i class="fa fa-angle-right"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="contact-us-content">
-          <form id="contact-form" action="" method="post">
-            <div class="row">
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
-                </fieldset>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<footer>
-  <div class="container">
-    <div class="col-lg-12">
-      <p>Copyright © 2036 Scholar Organization. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a href="https://templatemo.com" rel="nofollow" target="_blank">TemplateMo</a></p>
-    </div>
-  </div>
-</footer>
 
 <!-- Scripts -->
 <!-- Bootstrap core JavaScript -->
-<script src="./vendor/jquery/jquery.min.js"></script>
-<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="./assets/js/isotope.min.js"></script>
-<script src="./assets/js/owl-carousel.js"></script>
-<script src="./assets/js/counter.js"></script>
-<script src="./assets/js/custom.js"></script>
+<script src="./vendor/index.js"></script>
+<script src="./assets/index.js"></script>
+
 
 </body>
   `,
