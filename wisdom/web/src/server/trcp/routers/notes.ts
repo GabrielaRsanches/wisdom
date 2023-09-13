@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { publicProcedure, router } from '../trcp';
-import { db, notes } from '../../../../db';
+import { db, notes } from '../../../db'
 import { eq } from 'drizzle-orm';
 
 export const noteRouter = router({
