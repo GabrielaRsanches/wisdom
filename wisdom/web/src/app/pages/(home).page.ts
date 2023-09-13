@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import StudentRegistry from './studentRegistry';
 
 @Component({
   selector: 'web-home',
   standalone: true,
-  imports: [],
+  imports: [StudentRegistry],
   template: `
 
 
@@ -246,7 +247,7 @@ https://templatemo.com/tm-586-scholar
     </div>
   </div>
 </div>
-
+<student-registry></student-registry>
 <section class="section courses" id="courses" >
   <div class="container">
     <div class="row">
