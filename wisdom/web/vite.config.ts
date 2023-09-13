@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 
 import analog from '@analogjs/platform';
+import { resolve } from 'path';
 import { defineConfig, Plugin, splitVendorChunkPlugin } from 'vite';
 import tsConfigPaths from 'vite-tsconfig-paths';
 
@@ -11,6 +12,15 @@ export default defineConfig(({ mode }) => {
 
     build: {
       target: ['es2020'],
+      rollupOptions: {
+        input: {
+          main: resolve(__dirname, './index.html'),
+          nested: resolve(__dirname, 'nested/index.html'),
+        },
+        output: {
+          dir: resolve(__dirname, '../dist/index.html'),
+        }
+      },
     },
     plugins: [
       analog(),

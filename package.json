@@ -1,0 +1,15 @@
+{
+  "name": "wisdom",
+  "version": "1.0.0",
+  "description": "This app will be for elementary and high school students to clear their doubts with teachers registered in the app. The answers will have a maximum number of characters, so the student will know the teacher's didactics and will be able to contact him for private online classes. The teacher will receive scores for each answer given, the higher the score, the greater the chance of getting students for private lessons!",
+  "main": "wisdom/web/src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GabrielaRsanches/wisdom"
+  },
+  "author": "",
+  "license": "ISC"
+}

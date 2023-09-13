@@ -2,20 +2,19 @@
   "name": "web",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "./web/src",
   "targets": {
     "build": {
       "executor": "@nx/vite:build",
       "outputs": [
         "{options.outputPath}",
-        "{workspaceRoot}/dist/web/.nitro",
-        "{workspaceRoot}/dist/web/ssr",
-        "{workspaceRoot}/dist/web/analog"
+        "{workspaceRoot}/dist/.nitro",
+        "{workspaceRoot}/dist/ssr",
+        "{workspaceRoot}/dist/analog"
       ],
       "options": {
-        "main": "web/src/main.ts",
+        "main": "web/main.ts",
         "configFile": "web/vite.config.ts",
-        "outputPath": "dist/web/client"
+        "outputPath": "{workspaceRoot}/dist"
       },
       "defaultConfiguration": "production",
       "configurations": {
@@ -53,13 +52,19 @@
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["{projectRoot}/coverage"]
+      "outputs": [
+        "{projectRoot}/coverage"
+      ]
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "lintFilePatterns": ["./web/**/*.{ts,html}"]
+        "lintFilePatterns": [
+          "./web/**/*.{ts,html}"
+        ]
       }
     }
   },
