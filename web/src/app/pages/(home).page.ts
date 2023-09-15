@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import StudentRegistry from './studentRegistry';
+import TeacherRegistry from './techerRegistry';
 
 @Component({
   selector: 'web-home',
   standalone: true,
-  imports: [StudentRegistry],
+  imports: [StudentRegistry, TeacherRegistry],
   template: `
 
 
@@ -57,11 +58,11 @@ https://templatemo.com/tm-586-scholar
                   <!-- ***** Menu Start ***** -->
                   <ul class="nav">
                     <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                    <li class="scroll-to-section"><a href="#services">Professores</a></li>
+                    <li><a href="#contact">Professores</a></li>
                     <li class="scroll-to-section"><a href="#courses">Courses</a></li>
                     <li class="scroll-to-section"><a href="#team">Team</a></li>
                     <li class="scroll-to-section"><a href="#events">Events</a></li>
-                    <li class="scroll-to-section"><a href="#contact">Register Now!</a></li>
+                    <li><a href="#contact">Register Now!</a></li>
                 </ul>
                   <a class='menu-trigger'>
                       <span>Menu</span>
