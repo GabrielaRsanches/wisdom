@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'teacher-or-student', component: TeacherOrStudent },
   { path: 'student-registry', component: StudentRegistry },
   { path: 'teacher-registry', component: TeacherRegistry },
-  { path: 'teachers-feed', component: TeachersFeed, redirectTo: "pages/teachersFeed.ts" }
+  { path: 'teachers-feed', component: TeachersFeed }
 ]
 
 @NgModule({
