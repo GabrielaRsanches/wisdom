@@ -9,6 +9,7 @@ import StudentRegistry from './pages/studentRegistry';
 import TeacherRegistry from './pages/techerRegistry';
 import { TeachersFeed } from './pages/teachersFeed';
 import { NbButtonModule, NbLayoutModule, NbSidebarModule, NbSidebarService, NbThemeModule } from '@nebular/theme';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -27,7 +28,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { useHash: true }),
     NbLayoutModule,
     NbSidebarModule.forRoot(),
-    NbButtonModule // , if this is your app.module
+    NbButtonModule,
+    FormsModule
 
   ],
   providers: [NbSidebarService],

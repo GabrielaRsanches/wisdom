@@ -1,7 +1,7 @@
-import { randomUUID } from "crypto";
+
 import { Question } from "../question/Question";
 import { TeachingArea } from "../enum";
-import { Email } from "../email.interface";
+import { Email } from "../interfaces";
 
 export class Teacher {
 
@@ -16,7 +16,7 @@ export class Teacher {
     private answeredQuestions?: Question[]
   ){
     this.score = 0
-    this.teacherId = randomUUID()
+    this.teacherId = ""
   }
 
 

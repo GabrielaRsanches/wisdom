@@ -1,4 +1,4 @@
-import { randomUUID } from "crypto";
+
 
 export class Answer {
   constructor(
@@ -6,7 +6,7 @@ export class Answer {
     private text: string,
     private answeringTo: string
   ){
-    this.studentId = randomUUID()
+    this.studentId = ""
   }
 
   async createAnswer(questionId: string, text: string){

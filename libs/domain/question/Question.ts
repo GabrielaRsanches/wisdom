@@ -1,5 +1,5 @@
 
-import { randomUUID } from "crypto";
+
 import { Answer } from "../answer/Answer";
 import { Subject } from "../enum";
 import { Student } from "../student/Student";
@@ -17,7 +17,7 @@ export class Question {
     private readonly answeredBy?: Teacher
 
   ){
-  this.questionId = randomUUID()
+  this.questionId = ""
    this.createdAt = new Date()
   }
 
