@@ -5,7 +5,6 @@ import { ChildrenOutletContexts } from '@angular/router';
 @Component({
   selector: 'web-root',
   template: `
-
   <teacher-registry></teacher-registry>
 `,
 })

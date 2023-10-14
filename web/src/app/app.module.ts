@@ -6,9 +6,9 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import HomeComponent from './pages/(home).page';
 import { TeacherOrStudent } from './pages/teacherOrStudent';
 import StudentRegistry from './pages/studentRegistry';
-import TeacherRegistry from './pages/techerRegistry';
+import TeacherRegistry from './pages/teacherRegistry';
 import { TeachersFeed } from './pages/teachersFeed';
-import { NbButtonModule, NbLayoutModule, NbSidebarModule, NbSidebarService, NbThemeModule } from '@nebular/theme';
+import { NbButtonModule, NbCardComponent, NbCardModule, NbInputModule, NbLayoutFooterComponent, NbLayoutModule, NbSidebarModule, NbSidebarService, NbThemeModule } from '@nebular/theme';
 import {
   NbPasswordAuthStrategy,
   NbAuthModule,
@@ -16,6 +16,7 @@ import {
  } from '@nebular/auth';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   { path: 'home', component: AppComponent  },
@@ -26,13 +27,17 @@ const routes: Routes = [
 ]
 
 @NgModule({
+  bootstrap: [AppComponent],
   declarations: [ AppComponent, HomeComponent, TeacherOrStudent, StudentRegistry, TeacherRegistry ],
   imports: [
-
-    BrowserModule,
+    NbCardModule,
     NbThemeModule.forRoot(),
     RouterModule.forRoot(routes, { useHash: true }),
+    CommonModule,
     NbLayoutModule,
+    NbButtonModule,
+    BrowserModule,
+    NbInputModule,
     NbSidebarModule.forRoot(),
     NbButtonModule,
     FormsModule,
@@ -47,10 +52,11 @@ const routes: Routes = [
     }),
 
   ],
+
   providers: [NbSidebarService],
   exports: [RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  bootstrap: [AppComponent],
+
 })
 export class AppModule {
   constructor(router: Router){}
