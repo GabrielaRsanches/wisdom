@@ -5,15 +5,16 @@ import { Component } from '@angular/core';
   selector: 'web-home',
   template: `
 
-  <nb-layout>
-  <nb-layout-header fixed>Company Name</nb-layout-header>
-
-  <nb-sidebar>Sidebar Content</nb-sidebar>
+  <nb-layout center>
+  <nb-layout-header>Awesome Company</nb-layout-header>
 
   <nb-layout-column>
-    Page Content <button nbButton>Hello World</button>
+    Hello World!
   </nb-layout-column>
+
+  <nb-layout-footer>Contact us</nb-layout-footer>
 </nb-layout>
+
 
   `,
 })

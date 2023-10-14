@@ -9,8 +9,13 @@ import StudentRegistry from './pages/studentRegistry';
 import TeacherRegistry from './pages/techerRegistry';
 import { TeachersFeed } from './pages/teachersFeed';
 import { NbButtonModule, NbLayoutModule, NbSidebarModule, NbSidebarService, NbThemeModule } from '@nebular/theme';
-import { FormsModule } from '@angular/forms';
+import {
+  NbPasswordAuthStrategy,
+  NbAuthModule,
 
+ } from '@nebular/auth';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: 'home', component: AppComponent  },
@@ -23,20 +28,29 @@ const routes: Routes = [
 @NgModule({
   declarations: [ AppComponent, HomeComponent, TeacherOrStudent, StudentRegistry, TeacherRegistry ],
   imports: [
+
     BrowserModule,
     NbThemeModule.forRoot(),
     RouterModule.forRoot(routes, { useHash: true }),
     NbLayoutModule,
     NbSidebarModule.forRoot(),
     NbButtonModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    NbAuthModule.forRoot({
+      strategies: [
+        NbPasswordAuthStrategy.setup({
+          name: 'email',
+        }),
+      ],
+      forms: {},
+    }),
 
   ],
   providers: [NbSidebarService],
-  bootstrap: [AppComponent],
   exports: [RouterModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
-
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(router: Router){}
