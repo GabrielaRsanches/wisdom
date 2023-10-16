@@ -1,7 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "include": ["**/*.ts", "../jest.config.ts"],
-  "compilerOptions": {
-    "types": ["node", "vitest/globals"]
-  }
-}

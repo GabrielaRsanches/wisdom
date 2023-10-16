@@ -1,9 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* You can add global styles to this file, and also import other style files */
+@use '@nebular/auth/styles/globals' as *;
 
-html,
-body {
-  display: block;
-  height: 100%;
+@include nb-install() {
+  @include nb-theme-global();
+  @include nb-auth-global();
 }
+

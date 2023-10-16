@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import HomeComponent from './pages/(home).page';
+import { ChildrenOutletContexts } from '@angular/router';
+
 
 @Component({
   selector: 'web-root',
-  standalone: true,
-  imports: [HomeComponent, RouterOutlet],
-  template: `<router-outlet></router-outlet>`,
+  template: `
+  <teacher-registry></teacher-registry>
+`,
 })
-export class AppComponent {}
+export class AppComponent {
+  constructor(private contexts: ChildrenOutletContexts) {}
+}
