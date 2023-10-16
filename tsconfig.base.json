@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@wisdom/libs": ["libs/src/index.ts"]
+      "@wisdom/libs": ["libs/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"],

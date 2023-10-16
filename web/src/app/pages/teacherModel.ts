@@ -1,5 +1,5 @@
 import { NgModel } from "@angular/forms";
-import { TeachingArea } from "../../../../libs/domain/enum"
+import { TeachingArea } from "../../../../domain/src/enum"
 
 export class Teacher {
 

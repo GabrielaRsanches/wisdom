@@ -24,7 +24,7 @@
     "module": "es2015",
     "useDefineForClassFields": false,
     "lib": [
-      "ES2022",
+      "es2015",
       "dom"
     ]
   },
