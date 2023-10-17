@@ -6,8 +6,6 @@
   @include nb-auth-global();
 }
 
-.input-medium-max-width	{}
-
 .inputEmail{
   margin-top: 20px;
   margin-bottom: 20px;

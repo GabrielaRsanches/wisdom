@@ -3,7 +3,9 @@ import { ChildrenOutletContexts } from '@angular/router';
 
 @Component({
   selector: 'web-root',
-  template: ` <teacher-registry></teacher-registry> `,
+  template: `
+  <web-home></web-home>
+  `,
 })
 export class AppComponent {
   constructor(private contexts: ChildrenOutletContexts) {}

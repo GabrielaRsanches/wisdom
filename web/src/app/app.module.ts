@@ -10,10 +10,13 @@ import TeacherRegistry from './pages/teacherRegistry';
 import { TeachersFeed } from './pages/teachersFeed';
 import {
   NbButtonModule,
-  NbCardModule,
+  NbIconComponent,
+  NbIconLibraries,
   NbInputModule,
-  NbLayoutFooterComponent,
+
   NbLayoutModule,
+  NbMenuModule,
+  NbMenuService,
   NbSelectModule,
   NbSidebarModule,
   NbSidebarService,
@@ -24,6 +27,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FileUploadComponent } from './pages/models/file-upload/file-upload.component';
+import { MainMenuComponent } from './pages/models/main-menu/main-menu.component';
+
 
 const routes: Routes = [
   { path: 'home', component: AppComponent },
@@ -42,8 +47,10 @@ const routes: Routes = [
     StudentRegistry,
     TeacherRegistry,
     FileUploadComponent,
+    MainMenuComponent
   ],
   imports: [
+    NbMenuModule.forRoot(),
     NbSelectModule,
     NbThemeModule.forRoot(),
     RouterModule.forRoot(routes, { useHash: true }),
@@ -66,7 +73,7 @@ const routes: Routes = [
     }),
   ],
 
-  providers: [NbSidebarService],
+  providers: [NbSidebarService, NbMenuService],
   exports: [RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
