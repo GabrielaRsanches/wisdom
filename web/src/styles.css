@@ -6,3 +6,20 @@
   @include nb-auth-global();
 }
 
+.input-medium-max-width	{}
+
+.inputEmail{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: stretch
+}
+.inputSenha{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: stretch
+}
+.inputConfirmeSenha{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: stretch
+}

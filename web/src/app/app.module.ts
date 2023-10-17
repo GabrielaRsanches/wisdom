@@ -8,7 +8,7 @@ import { TeacherOrStudent } from './pages/teacherOrStudent';
 import StudentRegistry from './pages/studentRegistry';
 import TeacherRegistry from './pages/teacherRegistry';
 import { TeachersFeed } from './pages/teachersFeed';
-import { NbButtonModule, NbCardComponent, NbCardModule, NbInputModule, NbLayoutFooterComponent, NbLayoutModule, NbSidebarModule, NbSidebarService, NbThemeModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbInputModule, NbLayoutFooterComponent, NbLayoutModule, NbSelectModule, NbSidebarModule, NbSidebarService, NbThemeModule } from '@nebular/theme';
 import {
   NbPasswordAuthStrategy,
   NbAuthModule,
@@ -17,6 +17,7 @@ import {
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { FileUploadComponent } from './pages/models/file-upload/file-upload.component';
 
 const routes: Routes = [
   { path: 'home', component: AppComponent  },
@@ -28,9 +29,9 @@ const routes: Routes = [
 
 @NgModule({
   bootstrap: [AppComponent],
-  declarations: [ AppComponent, HomeComponent, TeacherOrStudent, StudentRegistry, TeacherRegistry ],
+  declarations: [ AppComponent, HomeComponent, TeacherOrStudent, StudentRegistry, TeacherRegistry, FileUploadComponent ],
   imports: [
-    NbCardModule,
+    NbSelectModule,
     NbThemeModule.forRoot(),
     RouterModule.forRoot(routes, { useHash: true }),
     CommonModule,
