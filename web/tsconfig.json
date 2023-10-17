@@ -4,7 +4,8 @@
     "src/**/*.ts",
     "src/polyfills.ts"
   ],
-  "compileOnSave": false,
+  "compileOnSave": true,
+  "formatOnSave": true,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
@@ -15,7 +16,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
-    "declaration": false,
+    "declaration": true,
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
