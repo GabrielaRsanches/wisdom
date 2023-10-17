@@ -4,7 +4,7 @@ export enum Subject {
   Portuguese = 'Portuguese',
   Literature = 'Literature',
   Biology = 'Biology',
-  Chemistry = 'Chemistry'
+  Chemistry = 'Chemistry',
 }
 
 export enum TeachingArea {
@@ -13,19 +13,19 @@ export enum TeachingArea {
   Portuguese = 'Portuguese',
   Literature = 'Literature',
   Biology = 'Biology',
-  Chemistry = 'Chemistry'
+  Chemistry = 'Chemistry',
 }
 
 export enum Grade {
-  FirstGrade = "FirstGrade",
-  SecondGrade = "SecondGrade",
-  ThirdGrade = "ThirdGrade",
-  FourthGrade = "FourthGrade",
-  FifthGrade = "FifthGrade",
-  SixthGrade = "SixthGrade",
-  SeventhGrade = "SeventhGrade",
-  EighthGrade = "EighthGrade",
-  NinthGrade = "NinthGrade",
-  EleventhGrade = "EleventhGrade",
-  TwelfthGrade = "TwelfthGrade"
+  FirstGrade = 'FirstGrade',
+  SecondGrade = 'SecondGrade',
+  ThirdGrade = 'ThirdGrade',
+  FourthGrade = 'FourthGrade',
+  FifthGrade = 'FifthGrade',
+  SixthGrade = 'SixthGrade',
+  SeventhGrade = 'SeventhGrade',
+  EighthGrade = 'EighthGrade',
+  NinthGrade = 'NinthGrade',
+  EleventhGrade = 'EleventhGrade',
+  TwelfthGrade = 'TwelfthGrade',
 }

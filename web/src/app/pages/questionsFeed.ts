@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'questions-feed',
-  template: `
-  `
-})export class QuestionsFeed{}
+  template: ``,
+})
+export class QuestionsFeed {}

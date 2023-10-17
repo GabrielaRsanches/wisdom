@@ -8,28 +8,41 @@ import { TeacherOrStudent } from './pages/teacherOrStudent';
 import StudentRegistry from './pages/studentRegistry';
 import TeacherRegistry from './pages/teacherRegistry';
 import { TeachersFeed } from './pages/teachersFeed';
-import { NbButtonModule, NbCardModule, NbInputModule, NbLayoutFooterComponent, NbLayoutModule, NbSelectModule, NbSidebarModule, NbSidebarService, NbThemeModule } from '@nebular/theme';
 import {
-  NbPasswordAuthStrategy,
-  NbAuthModule,
-
- } from '@nebular/auth';
+  NbButtonModule,
+  NbCardModule,
+  NbInputModule,
+  NbLayoutFooterComponent,
+  NbLayoutModule,
+  NbSelectModule,
+  NbSidebarModule,
+  NbSidebarService,
+  NbThemeModule,
+} from '@nebular/theme';
+import { NbPasswordAuthStrategy, NbAuthModule } from '@nebular/auth';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FileUploadComponent } from './pages/models/file-upload/file-upload.component';
 
 const routes: Routes = [
-  { path: 'home', component: AppComponent  },
+  { path: 'home', component: AppComponent },
   { path: 'teacher-or-student', component: TeacherOrStudent },
   { path: 'student-registry', component: StudentRegistry },
   { path: 'teacher-registry', component: TeacherRegistry },
-  { path: 'teachers-feed', component: TeachersFeed }
-]
+  { path: 'teachers-feed', component: TeachersFeed },
+];
 
 @NgModule({
   bootstrap: [AppComponent],
-  declarations: [ AppComponent, HomeComponent, TeacherOrStudent, StudentRegistry, TeacherRegistry, FileUploadComponent ],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    TeacherOrStudent,
+    StudentRegistry,
+    TeacherRegistry,
+    FileUploadComponent,
+  ],
   imports: [
     NbSelectModule,
     NbThemeModule.forRoot(),
@@ -51,14 +64,12 @@ const routes: Routes = [
       ],
       forms: {},
     }),
-
   ],
 
   providers: [NbSidebarService],
   exports: [RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-
 })
 export class AppModule {
-  constructor(router: Router){}
+  constructor(router: Router) {}
 }

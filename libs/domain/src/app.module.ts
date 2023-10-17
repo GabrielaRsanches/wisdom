@@ -8,12 +8,7 @@ import { Question } from './question/Question';
 import { Answer } from './answer/Answer';
 
 @Module({
-  imports: [
-    Teacher,
-    Student,
-    Question,
-    Answer
-  ],
+  imports: [Teacher, Student, Question, Answer],
   controllers: [AppController],
   providers: [AppService],
 })
