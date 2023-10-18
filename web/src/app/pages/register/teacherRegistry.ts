@@ -73,7 +73,7 @@ import { Component } from '@angular/core';
       </nb-layout-footer>
     </nb-layout>
   `,
-  styleUrls: [`../../styles.css`],
+  styleUrls: [`../../../styles.css`],
 })
 export default class TeacherRegistry {
   onFileSelected(event: any) {

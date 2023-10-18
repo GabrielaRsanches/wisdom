@@ -32,6 +32,6 @@ import { Component } from '@angular/core';
       </nb-layout-column>
     </nb-layout>
   `,
-  styleUrls: [`../../styles.css`],
+  styleUrls: [`../../../styles.css`],
 })
 export class TeacherOrStudent {}

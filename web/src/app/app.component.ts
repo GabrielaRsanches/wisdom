@@ -4,7 +4,7 @@ import { NbMenuItem } from '@nebular/theme';
 import { PrimeNGConfig } from 'primeng/api';
 @Component({
   selector: 'web-root',
-  template: ` <web-home></web-home> `,
+  template: ` <student-registry></student-registry> `,
   styleUrls: [`../styles.css`],
 })
 export class AppComponent {

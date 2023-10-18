@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
             type="text"
             nbInput
             status="info"
-            placeholder="Primeiro Nome"
+            placeholder="Nome"
             fullWidth
           />
         </div>
@@ -85,7 +85,7 @@ import { Component } from '@angular/core';
       </nb-layout-footer>
     </nb-layout>
   `,
-  styleUrls: [`../../styles.css`],
+  styleUrls: [`../../../styles.css`],
 })
 export default class StudentRegistry {
   selectedOption: string = '';

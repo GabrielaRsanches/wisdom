@@ -1,7 +1,8 @@
 import { IsEmail } from 'class-validator';
 import { TeachingArea } from './enum';
 import { Question } from './question/Question';
-export interface Email {
+export class Email {
+  @IsEmail()
   email: string;
 }
 
