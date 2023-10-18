@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 //import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -10,20 +11,27 @@ import TeacherRegistry from './pages/teacherRegistry';
 import { TeachersFeed } from './pages/teachersFeed';
 import {
   NbButtonModule,
-  NbCardModule,
+  NbIconComponent,
+  NbIconLibraries,
   NbInputModule,
-  NbLayoutFooterComponent,
   NbLayoutModule,
+  NbMenuModule,
+  NbMenuService,
   NbSelectModule,
   NbSidebarModule,
   NbSidebarService,
   NbThemeModule,
 } from '@nebular/theme';
 import { NbPasswordAuthStrategy, NbAuthModule } from '@nebular/auth';
+import { AccordionModule } from 'primeng/accordion';
+
+import { CardModule } from 'primeng/card';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FileUploadComponent } from './pages/models/file-upload/file-upload.component';
+
+import { TeacherSideBarComponent } from './pages/models/side-bar/side-bar.component';
 
 const routes: Routes = [
   { path: 'home', component: AppComponent },
@@ -42,8 +50,13 @@ const routes: Routes = [
     StudentRegistry,
     TeacherRegistry,
     FileUploadComponent,
+
+    TeacherSideBarComponent,
   ],
   imports: [
+    CardModule,
+    BrowserAnimationsModule,
+    AccordionModule,
     NbSelectModule,
     NbThemeModule.forRoot(),
     RouterModule.forRoot(routes, { useHash: true }),
@@ -66,7 +79,7 @@ const routes: Routes = [
     }),
   ],
 
-  providers: [NbSidebarService],
+  providers: [NbSidebarService, NbMenuService],
   exports: [RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
