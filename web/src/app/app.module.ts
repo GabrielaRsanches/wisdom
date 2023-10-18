@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 //import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -13,7 +14,6 @@ import {
   NbIconComponent,
   NbIconLibraries,
   NbInputModule,
-
   NbLayoutModule,
   NbMenuModule,
   NbMenuService,
@@ -23,12 +23,15 @@ import {
   NbThemeModule,
 } from '@nebular/theme';
 import { NbPasswordAuthStrategy, NbAuthModule } from '@nebular/auth';
+import { AccordionModule } from 'primeng/accordion';
+
+import { CardModule } from 'primeng/card';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FileUploadComponent } from './pages/models/file-upload/file-upload.component';
-import { MainMenuComponent } from './pages/models/main-menu/main-menu.component';
 
+import { TeacherSideBarComponent } from './pages/models/side-bar/side-bar.component';
 
 const routes: Routes = [
   { path: 'home', component: AppComponent },
@@ -47,10 +50,13 @@ const routes: Routes = [
     StudentRegistry,
     TeacherRegistry,
     FileUploadComponent,
-    MainMenuComponent
+
+    TeacherSideBarComponent,
   ],
   imports: [
-    NbMenuModule.forRoot(),
+    CardModule,
+    BrowserAnimationsModule,
+    AccordionModule,
     NbSelectModule,
     NbThemeModule.forRoot(),
     RouterModule.forRoot(routes, { useHash: true }),

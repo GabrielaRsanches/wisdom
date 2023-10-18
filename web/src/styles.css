@@ -1,10 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @use '@nebular/auth/styles/globals' as *;
+@use '@primeng/resources' as *;
 
 @include nb-install() {
   @include nb-theme-global();
   @include nb-auth-global();
 }
+
+@include primeng(){
+  @include primeicons-global();
+  @include primeng-themes-global();
+  @include primeng-resources-global();
+
+};
 
 .inputEmail{
   margin-top: 20px;
@@ -24,4 +32,11 @@
 
 .teacherOrStudent{
   margin-top:10em;
+}
+
+.buttons-side-bar{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: stretch;
+  display: flexbox;
 }
