@@ -4,18 +4,15 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 //import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { Router, RouterModule, Routes } from '@angular/router';
-import HomeComponent from './pages/(home).page';
-import { TeacherOrStudent } from './pages/teacherOrStudent';
-import StudentRegistry from './pages/studentRegistry';
-import TeacherRegistry from './pages/teacherRegistry';
-import { TeachersFeed } from './pages/teachersFeed';
+import HomeComponent from './components/pages/(home).page';
+import { TeacherOrStudent } from './components/pages/register/teacherOrStudent';
+import StudentRegistry from './components/pages/register/studentRegistry';
+import TeacherRegistry from './components/pages/register/teacherRegistry';
+import { TeachersFeed } from './components/pages/feeds/teachersFeed';
 import {
   NbButtonModule,
-  NbIconComponent,
-  NbIconLibraries,
   NbInputModule,
   NbLayoutModule,
-  NbMenuModule,
   NbMenuService,
   NbSelectModule,
   NbSidebarModule,
@@ -29,9 +26,10 @@ import { CardModule } from 'primeng/card';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { FileUploadComponent } from './pages/models/file-upload/file-upload.component';
+import { FileUploadComponent } from './services/file-upload/file-upload.component';
 
-import { TeacherSideBarComponent } from './pages/models/side-bar/side-bar.component';
+import { TeacherSideBarComponent } from './components/pages/models/side-bar/side-bar.component';
+import { QuestionsFeed } from './components/pages/feeds/questionsFeed';
 
 const routes: Routes = [
   { path: 'home', component: AppComponent },
@@ -50,8 +48,8 @@ const routes: Routes = [
     StudentRegistry,
     TeacherRegistry,
     FileUploadComponent,
-
     TeacherSideBarComponent,
+    QuestionsFeed,
   ],
   imports: [
     CardModule,

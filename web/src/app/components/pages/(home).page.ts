@@ -9,4 +9,6 @@ import { NbSidebarService } from '@nebular/theme';
     <main-menu></main-menu>
   `,
 })
-export default class HomeComponent {}
+export default class HomeComponent {
+  constructor(private sidebarService: NbSidebarService){}
+}
