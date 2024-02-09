@@ -1,6 +1,6 @@
 import { IsEmail, IsEnum, IsString, Min } from "class-validator";
 import { TeachingArea } from '../../libs/domain/src/enum'
-import { File } from "buffer";
+
 
 export class CreateTeacherDto {
   @IsString()
@@ -18,5 +18,5 @@ export class CreateTeacherDto {
   @IsEnum(TeachingArea)
   teachingAreas!: TeachingArea[];
 
-  credentials!: File;
+  credentials: InputEventInit | undefined;
 }
