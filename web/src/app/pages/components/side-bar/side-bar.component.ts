@@ -3,7 +3,7 @@ import { NbButtonAppearance, NbSidebarService } from '@nebular/theme';
 
 @Component({
   selector: 'teacher-side-bar',
-  template: ` <nb-layout>
+  template: ` <nb-layout >
     <nb-layout-header fixed>
       <button
         nbButton
@@ -14,8 +14,11 @@ import { NbButtonAppearance, NbSidebarService } from '@nebular/theme';
         (click)="toggle()"
       >
         {{ isToggled ? 'Fechar' : 'Abrir' }}
+        
       </button>
+      <h3 style="margin-left: 18em;">Registre-se</h3>
     </nb-layout-header>
+    <nb-layout-column>
     <nb-sidebar fixed>
       <button
         nbButton
@@ -48,6 +51,7 @@ import { NbButtonAppearance, NbSidebarService } from '@nebular/theme';
         Participações
       </button>
     </nb-sidebar>
+    </nb-layout-column>
   </nb-layout>`,
   styleUrls: [`../../../../styles.css`],
 })

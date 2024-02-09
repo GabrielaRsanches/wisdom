@@ -30,6 +30,7 @@ import { FileUploadComponent } from './services/file-upload/file-upload.componen
 
 import { TeacherSideBarComponent } from './pages/components/side-bar/side-bar.component';
 import { QuestionsFeed } from './pages/feeds/questionsFeed';
+import { AxiosService } from './services/apiClient';
 
 const routes: Routes = [
   { path: 'home', component: AppComponent },
@@ -77,7 +78,7 @@ const routes: Routes = [
     }),
   ],
 
-  providers: [NbSidebarService, NbMenuService],
+  providers: [NbSidebarService, NbMenuService, AxiosService],
   exports: [RouterModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

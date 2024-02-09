@@ -9,7 +9,7 @@ export class Teacher {
     private email: Email,
     private password: string,
     private credentials: Credential[],
-    private teachingArea: TeachingArea,
+    private teachingArea: TeachingArea[],
     private score: number,
     private answeredQuestions?: Question[],
   ) {

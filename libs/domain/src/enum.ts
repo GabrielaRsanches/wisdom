@@ -1,19 +1,21 @@
 export enum Subject {
-  ExactSciences = 'ExactSciences',
-  HumanSciences = 'HumanSciences',
   Portuguese = 'Portuguese',
-  Literature = 'Literature',
-  Biology = 'Biology',
-  Chemistry = 'Chemistry',
+  Matemática = 'Matemática',
+  História = 'História',
+  Geografia = 'Geografia',
+  Ciências = 'Ciências',
+  Literatura = 'Literatura',
+  Inglês = 'Inglês'
 }
 
 export enum TeachingArea {
-  ExactSciences = 'ExactSciences',
-  HumanSciences = 'HumanSciences',
   Portuguese = 'Portuguese',
-  Literature = 'Literature',
-  Biology = 'Biology',
-  Chemistry = 'Chemistry',
+  Matemática = 'Matemática',
+  História = 'História',
+  Geografia = 'Geografia',
+  Ciências = 'Ciências',
+  Literatura = 'Literatura',
+  Inglês = 'Inglês'
 }
 
 export enum Grade {

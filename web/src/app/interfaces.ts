@@ -1,7 +1,7 @@
-import { Grade, TeachingArea } from '../../../../libs/domain/src/enum';
-import { Email } from '../../../../libs/domain/src/interfaces'
-import { Student } from '../../../../libs/domain/src/student/Student';
-import { FileUploadComponent } from './file-upload/file-upload.component';
+import { Grade, TeachingArea } from '../../../libs/domain/src/enum';
+import { Email } from '../../../libs/domain/src/interfaces'
+import { Student } from '../../../libs/domain/src/student/Student';
+import { FileUploadComponent } from './services/file-upload/file-upload.component';
 
 export class ConfirmedPassword {
   arePasswordsMatching(password: string, confirmPassword: string): boolean {

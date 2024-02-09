@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { Grade } from '../../../../../libs/domain/src/enum';
+import { AxiosService } from '../../services/apiClient';
 
 @Component({
   selector: 'student-registry',
@@ -6,6 +8,7 @@ import { Component } from '@angular/core';
     <nb-layout center>
       <nb-layout-header>WISDOM</nb-layout-header>
       <nb-layout-column center style="margin-top:10ex">
+      <form (ngSubmit)="onSubmit()" #studentForm="ngForm">
         <div class="inputNome">
           <input
             type="text"
@@ -13,6 +16,9 @@ import { Component } from '@angular/core';
             status="info"
             placeholder="Nome"
             fullWidth
+            [(ngModel)]="studentName"
+            name="studentName"
+            required
           />
         </div>
         <div class="inputEmail">
@@ -55,6 +61,9 @@ import { Component } from '@angular/core';
         <nb-select
           *ngIf="selectedOption === '1'"
           id="EF1"
+          [(ngModel)]="grade"
+          name="grade"
+          required
           placeholder="Ano..."
           status="info"
           style="margin-bottom: 10px"
@@ -78,6 +87,7 @@ import { Component } from '@angular/core';
           <nb-option value="3">Oitavo ano</nb-option>
           <nb-option value="4">Nono ano</nb-option>
         </nb-select>
+        </form>
       </nb-layout-column>
 
       <nb-layout-footer>
@@ -89,4 +99,24 @@ import { Component } from '@angular/core';
 })
 export default class StudentRegistry {
   selectedOption: string = '';
+  studentName: string = '';
+  studentEmail: string = '';
+  studentPassword: string = '';
+  confirmedPassword: string = '';
+  grade!: Grade;
+
+  constructor(@Inject(AxiosService) private axiosService: AxiosService){}
+  
+  onSubmit() {
+    const userData = {
+      name: this.studentName,
+      email: this.studentEmail,
+      password: this.studentPassword,
+      confirmedPassword: this.confirmedPassword,
+      grade: this.grade
+     
+    };
+    this.axiosService.wisdomApi.student.create(userData)
+    console.log(userData)
+  }
 }

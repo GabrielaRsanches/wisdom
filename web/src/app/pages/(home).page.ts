@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { NbSidebarService } from '@nebular/theme';
+import { AxiosService } from '../services/apiClient';
 
 @Component({
   selector: 'web-home',
   template: `
-    <teacher-side-bar></teacher-side-bar>
+
     <teacher-registry></teacher-registry>
-    <main-menu></main-menu>
+    <teacher-side-bar></teacher-side-bar>
+   
   `,
 })
 export default class HomeComponent {
-  constructor(private sidebarService: NbSidebarService) {}
+  constructor(private sidebarService: NbSidebarService, private axiosService: AxiosService) {}
 }
